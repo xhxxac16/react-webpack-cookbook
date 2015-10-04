@@ -236,7 +236,7 @@ This is where Flux architecture and its variants come in. I will start by descri
 
 In addition to View Components which we just discussed, Reflux introduces the concepts of Actions and Stores. The flow goes like this: Components -> Actions -> Stores -> Components. Ie. you could have some control in a Component which then triggers some Action which then performs some operation (say PUT) and updates Store state. This state change is then propagated to Components listening to the Store.
 
-并且，Reflux 介绍了一种 Actions 和 Stores 的概念去组成刚才我们讨论的试图组件。整个数据流是这样的：组件 -> Actions -> Stores -> 组件。这样你可以在一个组件中控制触发一些 Action 然后执行一些操作（比如 PUT）然后更新 Store 的状态，状态的更新传播给监听 Store 的那些组件们。
+并且，Reflux 介绍了一种 Actions 和 Stores 的概念去组成刚才我们讨论的视图组件。整个数据流是这样的：组件 -> Actions -> Stores -> 组件。这样你可以在一个组件中控制触发一些 Action 然后执行一些操作（比如 PUT）然后更新 Store 的状态，状态的更新传播给监听 Store 的那些组件们。
 
 In case of our Todo example we would define basic `TodoActions` like create, update, delete and such. We would also have a `TodoStore`. It would maintain a data structure of a `TodoList`. Our components would then consume that data and display it as appropriate.
 
