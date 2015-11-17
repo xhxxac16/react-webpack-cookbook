@@ -6,11 +6,11 @@ You might notice after requiring React JS into your project that the time it tak
 
 > 注意！这个是设置一个压缩和发布的 React 版本，结果你可能会失去 `propTypes` 基础类型检查！
 
-## 在开发环境中使用压缩文件 
+## 在开发环境中使用压缩文件
 
 Instead of making Webpack go through React JS and all its dependencies, you can override the behavior in development.
 
-为了不让 Webpack 去遍历 React JS 及其依赖，你可以在开发中重写它的行为。
+为了不让 Webpack 去遍历 React JS 及其所有依赖，你可以在开发中重写它的行为。
 
 **webpack.config.js**
 
@@ -31,11 +31,11 @@ config = {
         filename: 'bundle.js',
     },
     module: {
-        loaders: [{
-            test: /\.jsx?$/,
-            loader: 'babel'
-        }],
-        noParse: [pathToReact]
+    	loaders: [{
+    		test: /\.jsx?$/,
+    		loader: 'babel'
+    	}],
+    	noParse: [pathToReact]
     }
 };
 
@@ -52,8 +52,8 @@ We do two things in this configuration:
 
 
 
-1. 不管 “React” 是什么时候在代码中引入的，它会去匹配压缩后的 React JS 文件取代去 *node_modules* 中遍历。
-2. 不管 Webpack 什么时候试图是解析压缩文件，我们阻止它，告诉它那不是必须的。
+1. 每当 "react" 在代码中被引入，它会使用压缩后的 React JS 文件，而不是到 *node_modules* 中找。
+2. 每当 Webpack 尝试去解析那个压缩后的文件，我们阻止它，因为这不必要。
 
 Take a look at [Optimizing development](Optimizing-development) for more information on this.
 
