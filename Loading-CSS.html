@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
-<html lang="en" >
+<html lang="zh-cn" >
     
     <head>
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>加载 CSS | React Webpack cookbook</title>
+        <title>加载 CSS | React Webpack 小书</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.1.0">
@@ -36,12 +36,12 @@
     <body>
         
         
-    <div class="book" data-level="3.1" data-basepath="." data-revision="Fri Jul 31 2015 20:20:53 GMT+0800 (CST)">
+    <div class="book" data-level="3.1" data-basepath="." data-revision="Tue Nov 17 2015 20:59:01 GMT+0800 (CST)">
     
 
 <div class="book-summary">
     <div class="book-search">
-        <input type="text" placeholder="Type to search" class="form-control" />
+        <input type="text" placeholder="输入并搜索" class="form-control" />
     </div>
     <ul class="summary">
         
@@ -59,7 +59,7 @@
                     <a href="./index.html">
                         <i class="fa fa-check"></i>
                         
-                        Introduction
+                        介绍
                     </a>
                 
             
@@ -542,7 +542,7 @@
         <li class="divider"></li>
         <li>
             <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-                Published with GitBook
+                本书使用 GitBook 发布
             </a>
         </li>
         
@@ -553,11 +553,11 @@
         <div class="body-inner">
             <div class="book-header">
     <!-- Actions Left -->
-    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
-    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    <a href="#" class="btn pull-left toggle-summary" aria-label="目录"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="搜索"><i class="fa fa-search"></i></a>
     
     <div id="font-settings-wrapper" class="dropdown pull-left">
-        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        <a href="#" class="btn toggle-dropdown" aria-label="字体设置"><i class="fa fa-font"></i>
         </a>
         <div class="dropdown-menu font-settings">
     <div class="dropdown-caret">
@@ -571,14 +571,14 @@
     </div>
 
     <div class="buttons font-family-list">
-        <button type="button" data-font="0" class="button">Serif</button>
-        <button type="button" data-font="1" class="button">Sans</button>
+        <button type="button" data-font="0" class="button">衬线体</button>
+        <button type="button" data-font="1" class="button">无衬线体</button>
     </div>
 
     <div class="buttons color-theme-list">
-        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
-        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
-        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">白色</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">棕褐色</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">夜间</button>
     </div>
 </div>
 
@@ -587,7 +587,7 @@
     <!-- Actions Right -->
     
     <div class="dropdown pull-right">
-        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        <a href="#" class="btn toggle-dropdown" aria-label="分享"><i class="fa fa-share-alt"></i>
         </a>
         <div class="dropdown-menu font-settings dropdown-left">
             <div class="dropdown-caret">
@@ -596,19 +596,19 @@
             </div>
             <div class="buttons">
                 <button type="button" data-sharing="twitter" class="button">
-                    Share on Twitter
+                    分享到 Twitter
                 </button>
                 <button type="button" data-sharing="google-plus" class="button">
-                    Share on Google
+                    分享到 Google
                 </button>
                 <button type="button" data-sharing="facebook" class="button">
-                    Share on Facebook
+                    分享到 Facebook
                 </button>
                 <button type="button" data-sharing="weibo" class="button">
-                    Share on Weibo
+                    分享到 Weibo
                 </button>
                 <button type="button" data-sharing="instapaper" class="button">
-                    Share on Instapaper
+                    分享到 Instapaper
                 </button>
             </div>
         </div>
@@ -631,7 +631,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="./" >React Webpack cookbook</a>
+        <a href="./" >React Webpack 小书</a>
     </h1>
 </div>
 
@@ -644,41 +644,87 @@
                         <p>Webpack allows you to load CSS like you load any other code. What strategy you choose is up to you, but you can do everything from loading all your css in the main entry point file to one css file for each component.</p>
 <p>Webpack&#x5141;&#x8BB8;&#x50CF;&#x52A0;&#x8F7D;&#x4EFB;&#x4F55;&#x4EE3;&#x7801;&#x4E00;&#x6837;&#x52A0;&#x8F7D; CSS&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x4F60;&#x6240;&#x9700;&#x8981;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x4F46;&#x662F;&#x4F60;&#x53EF;&#x4EE5;&#x4E3A;&#x6BCF;&#x4E2A;&#x7EC4;&#x4EF6;&#x628A;&#x6240;&#x6709;&#x4F60;&#x7684; CSS &#x52A0;&#x8F7D;&#x5230;&#x5165;&#x53E3;&#x4E3B;&#x6587;&#x4EF6;&#x4E2D;&#x6765;&#x505A;&#x4EFB;&#x4F55;&#x4E8B;&#x60C5;&#x3002;</p>
 <p>Loading CSS requires the <strong>css-loader</strong> and the <strong>style-loader</strong>. They have two different jobs. The <strong>css-loader</strong> will go through the CSS file and find <code>url()</code> expressions and resolve them. The <strong>style-loader</strong> will insert the raw css into a style tag on your page.</p>
-<p>&#x52A0;&#x8F7D; CSS &#x9700;&#x8981; <strong>css-loader</strong> &#x548C; <strong>style-loader</strong>&#xFF0C;&#x4ED6;&#x4EEC;&#x505A;&#x4E24;&#x4EF6;&#x4E0D;&#x540C;&#x7684;&#x4E8B;&#x60C5;&#xFF0C;<strong>css-loader</strong>&#x4F1A;&#x904D;&#x5386; CSS &#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x627E;&#x5230; <code>url()</code> &#x8868;&#x8FBE;&#x5F0F;&#x7136;&#x540E;&#x5904;&#x7406;&#x4ED6;&#x4EEC;&#xFF0C;<strong>style-loader</strong> &#x4F1A;&#x628A;&#x539F;&#x6765;&#x7684; CSS &#x4EE3;&#x7801;&#x63D2;&#x5165;&#x9875;&#x9762;&#x4E2D;&#x7684;&#x4E00;&#x4E2A; style &#x6807;&#x7B7E;&#x4E2D;&#x3002;</p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+&#x52A0;&#x8F7D; CSS &#x9700;&#x8981; <strong>css-loader</strong> &#x548C; <strong>style-loader</strong>&#xFF0C;&#x4ED6;&#x4EEC;&#x505A;&#x4E24;&#x4EF6;&#x4E0D;&#x540C;&#x7684;&#x4E8B;&#x60C5;&#xFF0C;<strong>css-loader</strong>&#x4F1A;&#x904D;&#x5386; CSS &#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x627E;&#x5230; <code>url()</code> &#x8868;&#x8FBE;&#x5F0F;&#x7136;&#x540E;&#x5904;&#x7406;&#x4ED6;&#x4EEC;&#xFF0C;<strong>style-loader</strong> &#x4F1A;&#x628A;&#x539F;&#x6765;&#x7684; CSS &#x4EE3;&#x7801;&#x63D2;&#x5165;&#x9875;&#x9762;&#x4E2D;&#x7684;&#x4E00;&#x4E2A; style &#x6807;&#x7B7E;&#x4E2D;&#x3002;</p>
 <h2 id="%E5%87%86%E5%A4%87%E5%8A%A0%E8%BD%BD-css">&#x51C6;&#x5907;&#x52A0;&#x8F7D; CSS</h2>
+<p>=======</p>
+<h2 id="preparing-css-loading">Preparing CSS loading</h2>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>master</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 <p>Install the two loaders: <code>npm install css-loader style-loader --save-dev</code>.</p>
 <p>&#x5B89;&#x88C5;&#x8FD9;&#x4E24;&#x4E2A;&#x52A0;&#x8F7D;&#x5668;&#xFF1A;<code>npm install css-loader style-loader --save-dev</code></p>
 <p>In the <em>webpack.config.js</em> file you can add the following loader configuration:</p>
-<p>&#x4F60;&#x53EF;&#x4EE5;&#x628A;&#x4E0B;&#x9762;&#x7684;&#x52A0;&#x8F7D;&#x5668;&#x914D;&#x7F6E;&#x52A0;&#x5230; <em>Webpack.config.js</em> &#x6587;&#x4EF6;&#x4E2D;&#x3002;</p>
-<p><em>webpack.config.js</em></p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
-<span class="hljs-keyword">var</span> config = {
-  entry: path.resolve(__dirname, <span class="hljs-string">&apos;app/main.js&apos;</span>)
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+&#x4F60;&#x53EF;&#x4EE5;&#x628A;&#x4E0B;&#x9762;&#x7684;&#x52A0;&#x8F7D;&#x5668;&#x914D;&#x7F6E;&#x52A0;&#x5230; <em>Webpack.config.js</em> &#x6587;&#x4EF6;&#x4E2D;&#x3002;</p>
+<h1 id="-webpack-config-js"><em>webpack.config.js</em></h1>
+<p><strong>webpack.config.js</strong></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>master
+```javascript
+var path = require(&apos;path&apos;);
+var config = {
+  entry: path.resolve(<strong>dirname, &apos;app/main.js&apos;)
   output: {
-    path: path.resolve(__dirname, <span class="hljs-string">&apos;build&apos;</span>),
-    filename: <span class="hljs-string">&apos;bundle.js&apos;</span>
+    path: path.resolve(</strong>dirname, &apos;build&apos;),
+    filename: &apos;bundle.js&apos;
   },
-  <span class="hljs-built_in">module</span>: {
+  module: {
     loaders: [{
-      test: <span class="hljs-regexp">/\.jsx$/</span>,
-      loader: <span class="hljs-string">&apos;jsx&apos;</span>
+      test: /.jsx$/,
+      loader: &apos;babel&apos;
     }, {
-      test: <span class="hljs-regexp">/\.css$/</span>, <span class="hljs-comment">// Only .css files</span>
-      loader: <span class="hljs-string">&apos;style!css&apos;</span> <span class="hljs-comment">// Run both loaders</span>
+      test: /.css$/, // Only .css files
+      loader: &apos;style!css&apos; // Run both loaders
     }]
   }
-};
+};</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>module.exports = config;</p>
+<pre><code>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+## &#x52A0;&#x8F7D; CSS &#x6587;&#x4EF6;
+Loading a CSS file is a simple as loading any file:
 
-<span class="hljs-built_in">module</span>.exports = config;
-</code></pre>
-<h2 id="%E5%8A%A0%E8%BD%BD-css-%E6%96%87%E4%BB%B6">&#x52A0;&#x8F7D; CSS &#x6587;&#x4EF6;</h2>
-<p>Loading a CSS file is a simple as loading any file:</p>
-<p>&#x52A0;&#x8F7D;&#x4E00;&#x4E2A; CSS &#x6587;&#x4EF6;&#x5C31;&#x548C;&#x52A0;&#x8F7D;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#x4E00;&#x6837;&#x7B80;&#x5355;&#xFF1A;</p>
-<p><em>main.js</em></p>
-<pre><code class="lang-javascript">import <span class="hljs-string">&apos;./main.css&apos;</span>;
-<span class="hljs-comment">// Other code</span>
-</code></pre>
-<p><em>Component.jsx</em></p>
+&#x52A0;&#x8F7D;&#x4E00;&#x4E2A; CSS &#x6587;&#x4EF6;&#x5C31;&#x548C;&#x52A0;&#x8F7D;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#x4E00;&#x6837;&#x7B80;&#x5355;&#xFF1A;
+
+*main.js*
+=======
+## Loading a CSS file
+
+Loading a CSS file is a simple as loading any file:
+
+**main.js**
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; master
+```javascript
+import &apos;./main.css&apos;;
+// Other code
+</code></pre><p><strong>Component.jsx</strong></p>
 <pre><code class="lang-javascript">import <span class="hljs-string">&apos;./Component.css&apos;</span>;
 import React from <span class="hljs-string">&apos;react&apos;</span>;
 
@@ -689,45 +735,104 @@ export <span class="hljs-keyword">default</span> React.createClass({
 });
 </span></code></pre>
 <p><strong>Note!</strong> You can of course do this with both CommonJS and AMD.</p>
-<p><strong>&#x6CE8;&#x610F;&#xFF01;</strong> &#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x5728; CommonJS &#x548C; AMD &#x4E2D;&#x505A;&#x540C;&#x6837;&#x7684;&#x4E8B;&#x60C5;&#x3002;</p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+<strong>&#x6CE8;&#x610F;&#xFF01;</strong> &#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x5728; CommonJS &#x548C; AMD &#x4E2D;&#x505A;&#x540C;&#x6837;&#x7684;&#x4E8B;&#x60C5;&#x3002;</p>
 <h2 id="css-%E5%8A%A0%E8%BD%BD%E7%AD%96%E7%95%A5">CSS &#x52A0;&#x8F7D;&#x7B56;&#x7565;</h2>
 <p>Depending on your application you might consider three main strategies. In addition to this you should consider including some of your basic CSS inlined with the initial payload (index.html). This will set the structure and maybe a loader while the rest of your application is downloading and executing.</p>
 <p>&#x6839;&#x636E;&#x4F60;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x8003;&#x7565;&#x4E09;&#x79CD;&#x7B56;&#x7565;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x8003;&#x8651;&#x628A;&#x4E00;&#x4E9B;&#x57FA;&#x7840;&#x7684; CSS &#x5185;&#x8054;&#x5230;&#x521D;&#x59CB;&#x5BB9;&#x5668;&#x4E2D;&#xFF08;index.html&#xFF09;&#xFF0C;&#x8FD9;&#x6837;&#x8BBE;&#x7F6E;&#x7684;&#x7ED3;&#x6784;&#x80FD;&#x591F;&#x5728;&#x5E94;&#x7528;&#x4E0B;&#x8F7D;&#x548C;&#x6267;&#x884C;&#x7684;&#x65F6;&#x5019;&#x52A0;&#x8F7D;&#x5269;&#x4E0B;&#x7684;&#x5E94;&#x7528;&#x3002;</p>
 <h3 id="%E6%89%80%E6%9C%89%E5%90%88%E5%B9%B6%E6%88%90%E4%B8%80%E4%B8%AA">&#x6240;&#x6709;&#x5408;&#x5E76;&#x6210;&#x4E00;&#x4E2A;</h3>
 <p>In your main entry point, e.g. <code>app/main.js</code> you can load up your entire CSS for the whole project:</p>
 <p>&#x5728;&#x4F60;&#x7684;&#x4E3B;&#x5165;&#x53E3;&#x6587;&#x4EF6;&#x4E2D;&#x4E2A;&#xFF0C;&#x6BD4;&#x5982; <code>app/main.js</code> &#x4F60;&#x53EF;&#x4EE5;&#x4E3A;&#x6574;&#x4E2A;&#x9879;&#x76EE;&#x52A0;&#x8F7D;&#x6240;&#x6709;&#x7684; CSS&#xFF1A;</p>
-<p><em>app/main.js</em></p>
+<h1 id="-app-main-js"><em>app/main.js</em></h1>
+<h2 id="css-loading-strategies">CSS loading strategies</h2>
+<p>Depending on your application you might consider three main strategies. In addition to this you should consider including some of your basic CSS inlined with the initial payload (index.html). This will set the structure and maybe a loader while the rest of your application is downloading and executing.</p>
+<h3 id="all-in-one">All in one</h3>
+<p>In your main entry point, e.g. <code>app/main.js</code> you can load up your entire CSS for the whole project:</p>
+<p><strong>app/main.js</strong></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>master</p>
 <pre><code class="lang-javascript">import <span class="hljs-string">&apos;./project-styles.css&apos;</span>;
 <span class="hljs-comment">// &#x5176;&#x4ED6; JS &#x4EE3;&#x7801;</span>
 </code></pre>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 <p>The CSS is included in the application bundle and does not need to download.</p>
-<p>CSS &#x5C31;&#x5B8C;&#x5168;&#x5305;&#x542B;&#x5728;&#x5408;&#x5E76;&#x7684;&#x5E94;&#x7528;&#x4E2D;&#xFF0C;&#x518D;&#x4E5F;&#x4E0D;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x4E0B;&#x8F7D;&#x3002;</p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+CSS &#x5C31;&#x5B8C;&#x5168;&#x5305;&#x542B;&#x5728;&#x5408;&#x5E76;&#x7684;&#x5E94;&#x7528;&#x4E2D;&#xFF0C;&#x518D;&#x4E5F;&#x4E0D;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x4E0B;&#x8F7D;&#x3002;</p>
 <h3 id="%E6%87%92%E5%8A%A0%E8%BD%BD">&#x61D2;&#x52A0;&#x8F7D;</h3>
 <p>If you take advantage of lazy loading by having multiple entry points to your application, you can include specific CSS for each of those entry points:</p>
 <p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x53D1;&#x6325;&#x5E94;&#x7528;&#x4E2D;&#x591A;&#x91CD;&#x5165;&#x53E3;&#x6587;&#x4EF6;&#x7684;&#x4F18;&#x52BF;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x6BCF;&#x4E2A;&#x5165;&#x53E3;&#x70B9;&#x5305;&#x542B;&#x5404;&#x81EA;&#x7684; CSS&#xFF1A;</p>
-<p><em>app/main.js</em></p>
+<h1 id="-app-main-js"><em>app/main.js</em></h1>
+<h3 id="lazy-loading">Lazy loading</h3>
+<p>If you take advantage of lazy loading by having multiple entry points to your application, you can include specific CSS for each of those entry points:</p>
+<p><strong>app/main.js</strong></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>master</p>
 <pre><code class="lang-javascript">import <span class="hljs-string">&apos;./style.css&apos;</span>;
 <span class="hljs-comment">// &#x5176;&#x4ED6; JS &#x4EE3;&#x7801;</span>
 </code></pre>
-<p><em>app/entryA/main.js</em></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>app/entryA/main.js</strong></p>
 <pre><code class="lang-javascript">import <span class="hljs-string">&apos;./style.css&apos;</span>;
 <span class="hljs-comment">// &#x5176;&#x4ED6; JS &#x4EE3;&#x7801;</span>
 </code></pre>
-<p><em>app/entryB/main.js</em></p>
+<p><strong>app/entryB/main.js</strong></p>
 <pre><code class="lang-javascript">import <span class="hljs-string">&apos;./style.css&apos;</span>;
 <span class="hljs-comment">// &#x5176;&#x4ED6; JS &#x4EE3;&#x7801;</span>
 </code></pre>
-<p>You divide your modules by folders and include both CSS and JavaScript files in those folders. Again, the imported CSS is included in each entry bundle when running in production. </p>
-<p>&#x4F60;&#x628A;&#x4F60;&#x7684;&#x6A21;&#x5757;&#x7528;&#x6587;&#x4EF6;&#x5939;&#x5206;&#x79BB;&#xFF0C;&#x6BCF;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x6709;&#x5404;&#x81EA;&#x7684; CSS &#x548C; JavaScript &#x6587;&#x4EF6;&#x3002;&#x518D;&#x6B21;&#xFF0C;&#x5F53;&#x5E94;&#x7528;&#x53D1;&#x5E03;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5BFC;&#x5165;&#x7684; CSS &#x5DF2;&#x7ECF;&#x52A0;&#x8F7D;&#x5230;&#x6BCF;&#x4E2A;&#x5165;&#x53E3;&#x6587;&#x4EF6;&#x4E2D;&#x3002;</p>
+<p>You divide your modules by folders and include both CSS and JavaScript files in those folders. Again, the imported CSS is included in each entry bundle when running in production.</p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+&#x4F60;&#x628A;&#x4F60;&#x7684;&#x6A21;&#x5757;&#x7528;&#x6587;&#x4EF6;&#x5939;&#x5206;&#x79BB;&#xFF0C;&#x6BCF;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x6709;&#x5404;&#x81EA;&#x7684; CSS &#x548C; JavaScript &#x6587;&#x4EF6;&#x3002;&#x518D;&#x6B21;&#xFF0C;&#x5F53;&#x5E94;&#x7528;&#x53D1;&#x5E03;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5BFC;&#x5165;&#x7684; CSS &#x5DF2;&#x7ECF;&#x52A0;&#x8F7D;&#x5230;&#x6BCF;&#x4E2A;&#x5165;&#x53E3;&#x6587;&#x4EF6;&#x4E2D;&#x3002;</p>
 <h3 id="%E5%85%B7%E4%BD%93%E7%9A%84%E7%BB%84%E4%BB%B6">&#x5177;&#x4F53;&#x7684;&#x7EC4;&#x4EF6;</h3>
 <p>With this strategy you create a CSS file for each component. It is common to namespace the CSS classes with the component name, thus avoiding some class of one component interfering with the class of an other.</p>
 <p>&#x4F60;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x8FD9;&#x4E2A;&#x7B56;&#x7565;&#x4E3A;&#x6BCF;&#x4E2A;&#x7EC4;&#x4EF6;&#x521B;&#x5EFA; CSS &#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x8BA9;&#x7EC4;&#x4EF6;&#x540D;&#x548C; CSS &#x4E2D;&#x7684; class &#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#xFF0C;&#x6765;&#x907F;&#x514D;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x4E2D;&#x7684;&#x4E00;&#x4E9B; class &#x5E72;&#x6270;&#x5230;&#x53E6;&#x5916;&#x4E00;&#x4E9B;&#x7EC4;&#x4EF6;&#x7684; class&#x3002;</p>
-<p><em>app/components/MyComponent.css</em></p>
+<h1 id="-app-components-mycomponent-css"><em>app/components/MyComponent.css</em></h1>
+<h3 id="component-specific">Component specific</h3>
+<p>With this strategy you create a CSS file for each component. It is common to namespace the CSS classes with the component name, thus avoiding some class of one component interfering with the class of an other.</p>
+<p><strong>app/components/MyComponent.css</strong></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>master</p>
 <pre><code class="lang-css"><span class="hljs-class">.MyComponent-wrapper</span> <span class="hljs-rules">{
   <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#EEE</span></span></span>;
 <span class="hljs-rule">}</span></span>
 </code></pre>
-<p><em>app/components/MyComponent.jsx</em></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>app/components/MyComponent.jsx</strong></p>
 <pre><code>import &apos;./MyComponent.css&apos;;
 import React from &apos;react&apos;;
 
@@ -740,26 +845,44 @@ export default React.createClass({
     )
   }
 });
-</code></pre><h2 id="%E4%BD%BF%E7%94%A8%E5%86%85%E8%81%94%E6%A0%B7%E5%BC%8F%E5%8F%96%E4%BB%A3-css-%E6%96%87%E4%BB%B6">&#x4F7F;&#x7528;&#x5185;&#x8054;&#x6837;&#x5F0F;&#x53D6;&#x4EE3; CSS &#x6587;&#x4EF6;</h2>
+</code></pre><p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<h2 id="%E4%BD%BF%E7%94%A8%E5%86%85%E8%81%94%E6%A0%B7%E5%BC%8F%E5%8F%96%E4%BB%A3-css-%E6%96%87%E4%BB%B6">&#x4F7F;&#x7528;&#x5185;&#x8054;&#x6837;&#x5F0F;&#x53D6;&#x4EE3; CSS &#x6587;&#x4EF6;</h2>
 <p>With &quot;React Native&quot; you do not use stylesheets at all, you only use the <em>style-attribute</em>. By defining your CSS as objects. Depending on your project, you might consider this as your CSS strategy.</p>
 <p>&#x5728; &#x201C;React Native&#x201D; &#x4E2D;&#x4F60;&#x4E0D;&#x518D;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x4EFB;&#x4F55; CSS &#x6587;&#x4EF6;&#xFF0C;&#x4F60;&#x53EA;&#x9700;&#x8981;&#x4F7F;&#x7528; <em>style &#x5C5E;&#x6027;</em>&#xFF0C;&#x53EF;&#x4EE5;&#x628A;&#x4F60;&#x7684; CSS &#x5B9A;&#x4E49;&#x6210;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x90A3;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x4F60;&#x7684;&#x9879;&#x76EE;&#x91CD;&#x65B0;&#x6765;&#x8003;&#x7565;&#x4F60;&#x7684; CSS &#x7B56;&#x7565;&#x3002;</p>
-<p><em>app/components/MyComponent.jsx</em></p>
-<pre><code class="lang-javascript">import React from <span class="hljs-string">&apos;react&apos;</span>;
-
-<span class="hljs-keyword">var</span> style = {
-  backgroundColor: <span class="hljs-string">&apos;#EEE&apos;</span>
-};
-
-export <span class="hljs-keyword">default</span> React.createClass({
-  render: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
-    <span class="hljs-keyword">return</span> (
-      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{style}</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Hello world<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<h1 id="-app-components-mycomponent-jsx"><em>app/components/MyComponent.jsx</em></h1>
+<h2 id="using-inline-styles-instead-of-stylesheets">Using inline styles instead of stylesheets</h2>
+<p>With &quot;React Native&quot; you do not use stylesheets at all, you only use the <em>style-attribute</em>. By defining your CSS as objects. Depending on your project, you might consider this as your CSS strategy.</p>
+<p><strong>app/components/MyComponent.jsx</strong></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>master
+```javascript
+import React from &apos;react&apos;;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>var style = {
+  backgroundColor: &apos;#EEE&apos;
+};</p>
+<p>export default React.createClass({
+  render: function () {
+    return (
+      <div style="{style}">
+        <h1>Hello world</h1>
+      </div>
     )
   }
 });
-</span></code></pre>
+```</p>
 
                     
                     </section>
