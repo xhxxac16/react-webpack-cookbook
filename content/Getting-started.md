@@ -124,7 +124,7 @@ In this case we can move the build step behind `npm run build` like this:
 2. Add the following to `package.json`:
 
 
-1. `npm i webpack --save` - 如果你想要把 Webpack 作为一个项目的开发依赖，就可以使用 `--save-dev`，这样就非常方便地让你在开发一个库的时候，不会依赖工具（但不是个好方法！）。
+1. `npm i webpack --save` - 如果你只是想要作为一个开发依赖安装 Webpack，你可以使用 `--save-dev` 参数。当你开发的项目中不依赖这个工具的时候这个命令是非常便利的。（不是个好主意！）
 2. 把下面的内容添加到 `package.json`中。
 
 ```json
