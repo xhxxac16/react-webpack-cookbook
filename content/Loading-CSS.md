@@ -4,9 +4,13 @@ Webpack允许像加载任何代码一样加载 CSS。你可以选择你所需要
 
 Loading CSS requires the **css-loader** and the **style-loader**. They have two different jobs. The **css-loader** will go through the CSS file and find `url()` expressions and resolve them. The **style-loader** will insert the raw css into a style tag on your page.
 
+<<<<<<< HEAD
 加载 CSS 需要 **css-loader** 和 **style-loader**，他们做两件不同的事情，**css-loader**会遍历 CSS 文件，然后找到 `url()` 表达式然后处理他们，**style-loader** 会把原来的 CSS 代码插入页面中的一个 style 标签中。
 
 ## 准备加载 CSS
+=======
+## Preparing CSS loading
+>>>>>>> master
 
 Install the two loaders: `npm install css-loader style-loader --save-dev`.
 
@@ -14,9 +18,14 @@ Install the two loaders: `npm install css-loader style-loader --save-dev`.
 
 In the *webpack.config.js* file you can add the following loader configuration:
 
+<<<<<<< HEAD
 你可以把下面的加载器配置加到 *Webpack.config.js* 文件中。
 
 *webpack.config.js*
+=======
+**webpack.config.js**
+
+>>>>>>> master
 ```javascript
 var path = require('path');
 var config = {
@@ -28,7 +37,7 @@ var config = {
   module: {
     loaders: [{
       test: /\.jsx$/,
-      loader: 'jsx'
+      loader: 'babel'
     }, {
       test: /\.css$/, // Only .css files
       loader: 'style!css' // Run both loaders
@@ -39,18 +48,28 @@ var config = {
 module.exports = config;
 ```
 
+<<<<<<< HEAD
 ## 加载 CSS 文件
 Loading a CSS file is a simple as loading any file:
 
 加载一个 CSS 文件就和加载其他文件一样简单：
 
 *main.js*
+=======
+## Loading a CSS file
+
+Loading a CSS file is a simple as loading any file:
+
+**main.js**
+
+>>>>>>> master
 ```javascript
 import './main.css';
 // Other code
 ```
 
-*Component.jsx*
+**Component.jsx**
+
 ```javascript
 import './Component.css';
 import React from 'react';
@@ -64,6 +83,7 @@ export default React.createClass({
 
 **Note!** You can of course do this with both CommonJS and AMD.
 
+<<<<<<< HEAD
 **注意！** 你也可以在 CommonJS 和 AMD 中做同样的事情。
 
 ## CSS 加载策略
@@ -79,6 +99,18 @@ In your main entry point, e.g. `app/main.js` you can load up your entire CSS for
 在你的主入口文件中个，比如 `app/main.js` 你可以为整个项目加载所有的 CSS：
 
 *app/main.js*
+=======
+## CSS loading strategies
+
+Depending on your application you might consider three main strategies. In addition to this you should consider including some of your basic CSS inlined with the initial payload (index.html). This will set the structure and maybe a loader while the rest of your application is downloading and executing.
+
+### All in one
+
+In your main entry point, e.g. `app/main.js` you can load up your entire CSS for the whole project:
+
+**app/main.js**
+
+>>>>>>> master
 ```javascript
 import './project-styles.css';
 // 其他 JS 代码
@@ -86,6 +118,7 @@ import './project-styles.css';
 
 The CSS is included in the application bundle and does not need to download.
 
+<<<<<<< HEAD
 CSS 就完全包含在合并的应用中，再也不需要重新下载。
 
 
@@ -96,25 +129,36 @@ If you take advantage of lazy loading by having multiple entry points to your ap
 如果你想发挥应用中多重入口文件的优势，你可以在每个入口点包含各自的 CSS：
 
 *app/main.js*
+=======
+### Lazy loading
+
+If you take advantage of lazy loading by having multiple entry points to your application, you can include specific CSS for each of those entry points:
+
+**app/main.js**
+
+>>>>>>> master
 ```javascript
 import './style.css';
 // 其他 JS 代码
 ```
 
-*app/entryA/main.js*
+**app/entryA/main.js**
+
 ```javascript
 import './style.css';
 // 其他 JS 代码
 ```
 
-*app/entryB/main.js*
+**app/entryB/main.js**
+
 ```javascript
 import './style.css';
 // 其他 JS 代码
 ```
 
-You divide your modules by folders and include both CSS and JavaScript files in those folders. Again, the imported CSS is included in each entry bundle when running in production. 
+You divide your modules by folders and include both CSS and JavaScript files in those folders. Again, the imported CSS is included in each entry bundle when running in production.
 
+<<<<<<< HEAD
 你把你的模块用文件夹分离，每个文件夹有各自的 CSS 和 JavaScript 文件。再次，当应用发布的时候，导入的 CSS 已经加载到每个入口文件中。
 
 ### 具体的组件
@@ -124,13 +168,22 @@ With this strategy you create a CSS file for each component. It is common to nam
 你可以根据这个策略为每个组件创建 CSS 文件，可以让组件名和 CSS 中的 class 使用一个命名空间，来避免一个组件中的一些 class 干扰到另外一些组件的 class。
 
 *app/components/MyComponent.css*
+=======
+### Component specific
+
+With this strategy you create a CSS file for each component. It is common to namespace the CSS classes with the component name, thus avoiding some class of one component interfering with the class of an other.
+
+**app/components/MyComponent.css**
+
+>>>>>>> master
 ```css
 .MyComponent-wrapper {
   background-color: #EEE;
 }
 ```
 
-*app/components/MyComponent.jsx*
+**app/components/MyComponent.jsx**
+
 ```
 import './MyComponent.css';
 import React from 'react';
@@ -146,6 +199,7 @@ export default React.createClass({
 });
 ```
 
+<<<<<<< HEAD
 ## 使用内联样式取代 CSS 文件
 
 With "React Native" you do not use stylesheets at all, you only use the *style-attribute*. By defining your CSS as objects. Depending on your project, you might consider this as your CSS strategy.
@@ -153,6 +207,14 @@ With "React Native" you do not use stylesheets at all, you only use the *style-a
 在 “React Native” 中你不再需要使用任何 CSS 文件，你只需要使用 *style 属性*，可以把你的 CSS 定义成一个对象，那样就可以根据你的项目重新来考略你的 CSS 策略。
 
 *app/components/MyComponent.jsx*
+=======
+## Using inline styles instead of stylesheets
+
+With "React Native" you do not use stylesheets at all, you only use the *style-attribute*. By defining your CSS as objects. Depending on your project, you might consider this as your CSS strategy.
+
+**app/components/MyComponent.jsx**
+
+>>>>>>> master
 ```javascript
 import React from 'react';
 

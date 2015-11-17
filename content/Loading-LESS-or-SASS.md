@@ -1,5 +1,6 @@
 If you want to use compiled CSS, there are two loaders available for you. The **less-loader** and the **sass-loader**. Depending on your preference, this is how you set it up.
 
+<<<<<<< HEAD
 如果你想使用编译 CSS，这里有两种可用的加载器：**less-loader** 和 **sass-loader**，看你喜欢哪种。下面是如何设置。
 
 ## 安装和设置加载器
@@ -8,6 +9,14 @@ If you want to use compiled CSS, there are two loaders available for you. The **
 `npm install less-loader` 或者 `npm install sass-loader`.
 
 *webpack.config.js*
+=======
+## Installing and configuring the loader
+
+`npm install less-loader` or `npm install sass-loader`.
+
+**webpack.config.js**
+
+>>>>>>> master
 ```javascript
 var path = require('path');
 var config = {
@@ -19,9 +28,9 @@ var config = {
   module: {
     loaders: [{
       test: /\.jsx$/,
-      loader: 'jsx'
-    }, 
-     
+      loader: 'babel'
+    },
+
     // LESS
     {
       test: /\.less$/,

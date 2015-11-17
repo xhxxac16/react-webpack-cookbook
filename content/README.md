@@ -1,10 +1,18 @@
+<<<<<<< HEAD
 [Gitbook 英文原版](http://christianalfoni.github.io/react-webpack-cookbook/)
+=======
+> [zh-cn](https://fakefish.github.io/react-webpack-cookbook/)
+>>>>>>> master
 
 > 如果你想修改中文版，请提交PR [中文版本](https://github.com/fakefish/react-webpack-cookbook) 或者在 [原 Repo](https://github.com/christianalfoni/react-webpack-cookbook/issues) 中提 Issues。
 
 这本小书的目的是引导你进入 React 和 Webpack 的世界。他们两个都是非常有用的技术，如果同时使用他们，前端开发会更加有趣。
 
+<<<<<<< HEAD
 这本小书会提供所有相关的技能。如果你只是对 React 感兴趣，那可以跳过 Webpack 相关的内容，反之亦然。 如果想学习更多的相关知识可以移步 [SurviveJS - Webpack and React](https://github.com/survivejs/webpack_react)。 
+=======
+The cookbook should have something to offer for all skill levels. If you are interested in just React, skip the Webpack part and vice versa. A more tutorial oriented approach is available in the form of [SurviveJS - Webpack and React](http://survivejs.com/) book.
+>>>>>>> master
 
 ## React
 
@@ -12,10 +20,22 @@ React 是一个能够让开发模块变成简单的库。一旦你理解他的�
 
 如果你想很快过一遍 React 的知识点，那么 [React 官方教程](http://facebook.github.io/react/docs/tutorial.html) 是一个很好的开始。
 
+<<<<<<< HEAD
 可能 React 最有趣的事是它一直会尝试调整传统的 web 组件的思路。它让我们重新思考关注点的分离。它（[React Native](https://facebook.github.io/react-native/)）也会影响 App 开发。 React Native 提供了一种使用 JavaScript 开发原生应用同时保证了原生性能。
+=======
+Perhaps the most intriguing thing about React is that it keeps on challenging traditional web development. It allows us to rethink concepts such as separation of concern. It will also influence on mobile development in the form of [React Native](http://facebook.github.io/react-native). React Native allow native level performance while making it possible to develop apps in a tight realtime preview loop using JavaScript.
+>>>>>>> master
 
 ## Webpack
 
 Webpack 非常容易操作，它是一个模块合并的工具，本质就是一个能够把各种组件（HTML，CSS，JS）构建成项目。最方便的是你只需要初始化配置一次，Webpack 会替你做那些繁琐的事情，同时也保证了让你可以在项目中混合使用各种技术而不头疼。
 
+<<<<<<< HEAD
 如果你在 Webpack 方面完全是新手的，但想开始一个简单的教程的话，可以去 [Pete Hunt&apos;s guide](https://github.com/petehunt/webpack-howto)。你可以在那里学习到一些基础的使用，这里只是那边的一个补充。
+=======
+If you are completely new to Webpack and want to go through a good introduction, check out [Pete Hunt's guide](https://github.com/petehunt/webpack-howto). You'll find the basics there. This guide merely complements his.
+
+## Written by
+
+[Christian Alfoni](http://www.christianalfoni.com/) and [Juho Vepsäläinen](http://survivejs.com/).
+>>>>>>> master

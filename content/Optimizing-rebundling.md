@@ -2,13 +2,18 @@ You might notice after requiring React JS into your project that the time it tak
 
 你可能注意到在引入 React JS 到你的项目之后，给你的应用重新合并会花费太多的时间。在开发环境中，最理想的是编译最多 200 到 800 毫秒的速度，取决于你在开发的应用。
 
+> IMPORTANT! This setup a minified, production version of React. As a result you will lose `propTypes` based type validation!
+
+> 注意！这个是设置一个压缩和发布的 React 版本，结果你可能会失去 `propTypes` 基础类型检查！
+
 ## 在开发环境中使用压缩文件 
 
 Instead of making Webpack go through React JS and all its dependencies, you can override the behavior in development.
 
 为了不让 Webpack 去遍历 React JS 及其依赖，你可以在开发中重写它的行为。
 
-*webpack.config.js*
+**webpack.config.js**
+
 ```javascript
 var path = require('path');
 var node_modules = path.resolve(__dirname, 'node_modules');
@@ -17,21 +22,21 @@ var pathToReact = path.resolve(node_modules, 'react/dist/react.min.js');
 config = {
     entry: ['webpack/hot/dev-server', path.resolve(__dirname, 'app/main.js')],
     resolve: {
-	    alias: {
-	      'react': pathToReact
-	    }
-	},
+        alias: {
+          'react': pathToReact
+        }
+    },
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: 'bundle.js',
     },
     module: {
-    	loaders: [{
-    		test: /\.jsx?$/,
-    		loader: 'babel'
-    	}],
-    	noParse: [pathToReact]
-    }    
+        loaders: [{
+            test: /\.jsx?$/,
+            loader: 'babel'
+        }],
+        noParse: [pathToReact]
+    }
 };
 
 module.exports = config;
