@@ -23,7 +23,7 @@ We have already used *package.json* to create the `npm run dev` script. Now let 
   "main": "app/main.js",
   "scripts": {
     "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build",
-    "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js"
+    "deploy": "set NODE_ENV=production && webpack -p --config webpack.production.config.js"
   },
   "author": "",
   "license": "ISC",
